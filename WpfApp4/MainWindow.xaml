@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="500">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Sign Up" Width="150" Height="30">
+                <StackPanel>
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <Label Content="Name" Width="100"/>
+                        <TextBox x:Name="Name_TextBox" Width="300"/>
+                    </StackPanel>
+                    
+                    <StackPanel Margin ="10" Orientation="Horizontal">
+                        <Label Content="Surname" Width="100"/>
+                        <TextBox x:Name="Surname_TextBox" Width="300"/>
+                    </StackPanel>
+                    
+                    <StackPanel Name="GenderSTC" Margin="10" Orientation="Horizontal">
+                        <RadioButton Content="Male" IsChecked="True" Width="100"/>
+                        <RadioButton Content="Female" />
+                    </StackPanel>
+
+                    <StackPanel>
+                        <CheckBox x:Name="Stepp" Content="Step?" Margin="10"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <ComboBox Name="CityCMB" Width="200" HorizontalAlignment="Left" Margin="10">
+                            <ComboBoxItem Content="Baku" IsSelected="True"/>
+                            <ComboBoxItem Content="Sumgait"/>
+                            <ComboBoxItem Content="Semkir"/>
+                            <ComboBoxItem Content="None"/>
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <Button Name="Add_Button" Width="250" Height="50" Margin="10" Content ="Add" Click="Add_Button_Click"/>
+                </StackPanel>
+                
+            </TabItem>
+            
+            <TabItem Header="Sign In" Width="150" Height="30">
+                <StackPanel>
+                    <ListBox Name="Listtt" Height="400" VerticalAlignment="Top"/>
+                    <Button Name="Remove_Button" Width="250" Height="50" Margin="20" Content="Remove" Click="Remove_Button_Click"/>
+                    <Button Name="Save_Button" Width="250" Height="50" Margin="20" Content="Save" Click="Save_Button_Click"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
